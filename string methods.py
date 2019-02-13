@@ -39,10 +39,12 @@ print("pyth\t0n".expandtabs(8))
 #Find ():-
 print("let it be let it be".find("be"))
 print("let it be".find("small"))
+print("let it be".rfind("small"))
 
 #index():-
 print("hi good morning".index("good"))
 print("hi good morning".index("good",3,-1))
+print("hi good morning".rindex("good"))
 
 #isalnum:-
 print("hi23".isalnum())
@@ -59,23 +61,56 @@ print("abc123".isdecimal())
 #isdigit:-
 print("123".isdigit())
 
-#lower
-print("SUNEETHA".lower())
+#islower:-
+print("suneetha".islower())
+print("SUNEETHA".islower())
+
+#isprintable:=
+print("hi how are".isprintable())
+print("hi how are\n".isprintable())
+print("  ".isprintable())
+
+
+#isspace:-
+print("hi how are you".isspace())
+print("\n\t ".isspace())
+
+#join:-
+s1 = "charan"
+s2="sankeerth"
+sep=","
+print(sep.join(s1))
+print(s1.join(s2))
+
+
+#ljust:
+print("suneetha".ljust(30,"*"))
+
+#rjust:-
+print("charan".rjust(30,"*"))
+
+#strip methods:-
+print("   charan     \n".rstrip())
+
+#partition:-
+print("hi how are you".partition("how"))
+print("hi how are you".rpartition("you"))
+
+
+#replace:-
+print("suneetha charan".replace("charan","nagesh"))
+print("let it be let it be".replace("let","don't"))
+print("let it be let it be".count("let"))
+
+#split:-
+print("suneetha".split())
 
 
 
 
-
-
-
-
-
-
-
- #'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable',
-  #'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
-  #'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase',
-  #'title', 'translate', 'upper', 'zfill']
+ # , '', '', '', '',
+  #'', '', '', 'rsplit', '', 'split', 'splitlines', '', '', 'swapcase',
+  #'', '', '', 'zfill']
 """ ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', 
 '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', 
 '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__',
