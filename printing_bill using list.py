@@ -1,8 +1,8 @@
 #Input Details given in list
 qty,price,sl=[2.458624586,5.245816,7.458632,2.78636423,3.45862,4.4586621456],[10.4786526,45.489626,34.48622,51.48622,23.4826568,56.789566],[1,2,3,4,5,6]
-print("VIJETHA".center(50))
-print("SUPER MARKET".center(50,'*'))
-print("Date:- 10 Feb 2019".rjust(50))
+print('%25s'%"VIJETHA")
+print('%25s'%"SUPER MARKET")
+print('%30s'%"Date:- 10 Feb 2019")
 print("-"*50)
 print("SL\tDescription\tQty\t Unit Rate\tTotal Cost\n")
 #Calculating the Total price
