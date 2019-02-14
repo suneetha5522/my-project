@@ -1,9 +1,17 @@
-
-list1=[1,2,3,"ram","Ramesh","None",45,90]  #Assigning values to the list
-list1.pop(5)                               #Deleting the None from List
-list1.insert(5,"True")                      #Inserting the Ture in place of None
+'''Remove all Nones in to string without using for loop'''
+#Input values given to list
+list1=[1,2,3,None,"ram","Ramesh",24,56,None,10]
+res=list1.index(None)    #finding the None in List1
+list1.remove(None)             #Deleting the None in list1
+list1.insert(res,"string")     #updating  First None with String
 print(list1)
 
-list2=[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1]
-print(list2.count(1))
+res1=list1.index(None)    #finding the None in List1
+list1.remove(None)             #Deleting the None in list1
+list1.insert(res1,"string")    #updating Second None with String
+print(list1)
+
+
+
+
 
