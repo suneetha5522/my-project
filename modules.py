@@ -30,10 +30,12 @@ print("multiplication of numbers", math.fabs(mul(4.5, 6.7)))
 print("modulus of numbers", math.trunc(modulus(78, 12)))
 
 # converting date string into date:-
-datetime_obj = datetime.strptime(date_str, format_str)
-print("Time for given string", datetime.strptime('03:55:34', '%H:%M:%S').time())
-print(datetime_obj.date())
+date_time_str = '2019-02-22 08:15:27.243860'
+date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
 
+print('Date:', date_time_obj.date())
+print('Time:', date_time_obj.time())
+print('Date-time:', date_time_obj)
 
 # finding the current date time:-
 current_date = datetime.now()
