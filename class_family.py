@@ -5,35 +5,45 @@ create a class for family members
 """
 
 
-class Person:
+class Family:
 
     def __init__(self):
-        self.person = []
+        self.family = []
 
-    def add_person(self, p1, p2, p3):
-        """
-        :param p1: person 1 details as a dictionary
-        :param p2: person 2 details as a dictionary
-        :param p3: person 3 details as a dictionary
-        :return: p1,p2,p3
-        """
-        self.person.append(p1)     # appending the person1 details
-        self.person.append(p2)     # appending the person 2 details
-        self.person.append(p3)     # appending the person 3 details
-        print("no of families present in the class", len(self.person))   # getting the length of list of dictionaries
-        self.person.pop()        # deleting the particular ID with details
+    def add_member_family(self, name, age, mid):
+        d = {"name": name, 'age': age, "id": mid}
+        self.family.append(d)
+        return True
+
+    def no_of_families(self):
+        return len(self.family)
+
+    def remove_one_family_by_id(self, mid):
+        self.family.pop(1)
+        return mid
 
 
-x = Person()
+x = Family()
 
-# creating the attributes
+x.add_member_family("charan", 23, 12345)
+x.add_member_family("ravi", 25, 123456)
+x.add_member_family("kumar", 27, 123457)
+x.add_member_family("nagesh", 30, 1234556)
+x.add_member_family("suneetha", 23, 12345568)
+print("The familes are:", x.family)
 
-x.add_person({'name': "charan", 'age': 23, 'id': 345678},
-             {'name': "kumar", 'age': 33, 'id': 122365},
-             {'name': "ravi", 'age': 25, 'id': 458511})
+y = x.no_of_families()
+print("The total no.of families are:", y)
 
-x.add_person({'name': "rajini", 'age': 23, 'id': 345678998},
-             {'name': "naresh", 'age': 33, 'id': 12236789},
-             {'name': "suresh", 'age': 25, 'id': 458579898})
+z = x.remove_one_family_by_id(12345)
+print("The deleted is is:",z)
 
-print("The list if family details are", x.person)
+
+
+
+
+
+
+
+
+
