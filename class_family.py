@@ -8,20 +8,41 @@ create a class for family members
 class Family:
 
     def __init__(self):
+        """
+        creating the constructor for the class
+        """
         self.family = []
 
     def add_member_family(self, name, age, mid):
+        """
+        adding the member to family list
+        :param name: variable
+        :param age: variable
+        :param mid: variable
+        :return: appending the variables to family list
+        """
         d = {"name": name, 'age': age, "id": mid}
         self.family.append(d)
         return True
 
     def no_of_families(self):
+        """
+        finding the how many families are present in the list of families
+        :return: length of the family
+        """
         return len(self.family)
 
     def remove_one_family_by_id(self, mid):
-        self.family.pop(1)
-        return mid
+        """
+        deleting the one family by using the ID
+        :param mid: id in family class
+        :return: deleted family by id
+        """
 
+        for i, d in enumerate(self.family):
+            if d.get("id", mid) == mid:
+                del i
+                return d
 
 x = Family()
 
@@ -34,16 +55,5 @@ print("The familes are:", x.family)
 
 y = x.no_of_families()
 print("The total no.of families are:", y)
-
 z = x.remove_one_family_by_id(12345)
-print("The deleted is is:",z)
-
-
-
-
-
-
-
-
-
-
+print("The deleted family by using id:", z)
